@@ -10,14 +10,21 @@ p {
   padding: 0;
 }
 
+#outer-box {
+  border: solid rgb(131, 1, 123);
+  border-width: 10px;
+}
+
+p {
+  color: yellow;
+  margin: 0px;
+  padding: 0px;
+}
+
+.inner-box {
+  background-color: red;
+}
+
 .white-text {
   color: white;
-}
-
-#outer-box{
-  background-color: purple;
-}
-
-.inner-box{
-  background-color: red;
 }
