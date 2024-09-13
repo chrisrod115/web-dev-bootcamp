@@ -18,3 +18,7 @@ ul > li {
 ul > p {
     font-size: 10pt;
 }
+
+body > p {
+    font-weight: 900;
+}
