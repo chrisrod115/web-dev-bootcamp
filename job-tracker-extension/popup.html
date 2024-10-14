@@ -1,0 +1,70 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Job Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="job-tracker">
+    <h1>Job Tracker</h1>
+    
+    <!-- Job Counter and Filter Icon -->
+    <div class="header-controls">
+      <div id="job-counter">Total Jobs: 0</div>
+      <div class="filter-container">
+        <button id="filter-btn" class="filter-btn" title="Filter Jobs">
+          <!-- Filter Icon (SVG) -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" viewBox="0 0 24 24">
+            <path d="M10 18l-4-4h8l-4 4zM4 6h16v2H4V6zm5-4h6v2H9V2z"/>
+          </svg>
+        </button>
+        <!-- Filter Dropdown -->
+        <div id="filter-dropdown" class="filter-dropdown hidden">
+          <button class="filter-option" data-status="All">All</button>
+          <button class="filter-option" data-status="Applied">Applied</button>
+          <button class="filter-option" data-status="Interview">Interview</button>
+          <button class="filter-option" data-status="Offer">Offer</button>
+          <button class="filter-option" data-status="Rejected">Rejected</button>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Job Form -->
+    <form id="job-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">Company</label>
+          <input type="text" id="company" placeholder="Enter company name" required>
+        </div>
+        <div class="form-group">
+          <label for="job-title">Job Title</label>
+          <input type="text" id="job-title" placeholder="Enter job title" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="reference-id">Reference ID</label>
+          <input type="text" id="reference-id" placeholder="Enter reference ID">
+        </div>
+        <div class="form-group">
+          <label for="status">Status</label>
+          <select id="status" required>
+            <option value="Applied">Applied</option>
+            <option value="Interview">Interview</option>
+            <option value="Offer">Offer</option>
+            <option value="Rejected">Rejected</option>
+          </select>
+        </div>
+      </div>
+      <button type="submit">Add Job</button>
+    </form>
+    
+    <!-- Job List -->
+    <ul id="job-list"></ul>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
